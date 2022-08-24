@@ -25,7 +25,10 @@ Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-jedi'
 Plug 'jiangmiao/auto-pairs'
 
-" Formater
+" For Django. Then coc.nvim has been installed, run 'CocInstall coc-htmldjango' and 'CocInstall coc-css'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"Formater
 Plug 'Chiel92/vim-autoformat'
 
 " For styles/CSS
@@ -119,6 +122,3 @@ nnoremap <A-l> <C-w>l
 " ncm2-jedi python setings
 let g:ncm2_jedi = '/usr/bin/python3'
 let g:python3_host_prog = '/usr/bin/python3'
-
-" Autocomplete with <Tab>
-inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
