@@ -120,6 +120,5 @@ nnoremap <A-l> <C-w>l
 let g:ncm2_jedi = '/usr/bin/python3'
 let g:python3_host_prog = '/usr/bin/python3'
 
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+" Autocomplete with <Tab>
+inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
