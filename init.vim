@@ -25,7 +25,7 @@ Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-jedi'
 Plug 'jiangmiao/auto-pairs'
 
-" For Django. Then coc.nvim has been installed, run 'CocInstall coc-htmldjango' and 'CocInstall coc-css'
+" For Django. After coc.nvim has been installed, run 'CocInstall coc-htmldjango' and 'CocInstall coc-css'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "Formater
