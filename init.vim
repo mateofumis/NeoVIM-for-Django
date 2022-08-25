@@ -80,9 +80,6 @@ autocmd!
 autocmd BufEnter * call ncm2#enable_for_buffer()
 " :help Ncm2PopupOpen for more information
 set completeopt=noinsert,menuone,noselect
-" When the <Enter> key is pressed while the popup menu is visible, it only
-" hides the menu. Use this mapping to close the menu and also start a new line.
-inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 augroup END
 " Ale
 let g:ale_lint_on_enter = 0
