@@ -3,7 +3,7 @@
 call plug#begin()
 
 " UI related
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
@@ -43,12 +43,10 @@ syntax on
 syntax enable
 " colorscheme
 let base16colorspace=256
-colorscheme onehalfdark
+colorscheme base16-gruvbox-dark-hard
 set background=dark
 " True Color Support if it's avaiable in terminal
 if has("termguicolors")
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     set termguicolors
 endif
 if has("gui_running")
@@ -62,7 +60,6 @@ set noshowmode
 set scrolloff=10
 set noshowmatch
 set nolazyredraw
-set cursorline
 " Turn off backup
 set nobackup
 set noswapfile
@@ -101,8 +98,6 @@ let g:airline#extensions#ale#enabled = 1
 let airline#extensions#ale#error_symbol = 'E:'
 let airline#extensions#ale#warning_symbol = 'W:'
 
-
-let g:airline_theme='onehalfdark'
 "NERDTree setup
 
 "Changing default NERDTree arrows
