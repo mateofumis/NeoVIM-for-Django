@@ -19,8 +19,6 @@ Plug 'w0rp/ale'
 
 " Autocomplete
 Plug 'jiangmiao/auto-pairs'
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " For Django. After coc.nvim has been installed, run 'CocInstall coc-htmldjango' and 'CocInstall coc-css'
-
 
 "Formater
 Plug 'Chiel92/vim-autoformat'
@@ -101,6 +99,3 @@ tnoremap <A-l> <C-\><C-n><C-w>l
 nnoremap <A-h> <C-w>h
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
-
-" Disable alert of coc.nvim at startup
-let g:coc_disable_startup_warning = 1
