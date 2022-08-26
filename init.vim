@@ -18,15 +18,9 @@ Plug 'preservim/nerdtree'
 Plug 'w0rp/ale'
 
 " Autocomplete
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-jedi'
 Plug 'jiangmiao/auto-pairs'
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " For Django. After coc.nvim has been installed, run 'CocInstall coc-htmldjango' and 'CocInstall coc-css'
 
-" For Django. After coc.nvim has been installed, run 'CocInstall coc-htmldjango' and 'CocInstall coc-css'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "Formater
 Plug 'Chiel92/vim-autoformat'
@@ -73,14 +67,6 @@ set tabstop=4
 set shiftwidth=4
 " vim-autoformat
 noremap <F3> :Autoformat<CR>
-" NCM2
-augroup NCM2
-autocmd!
-" enable ncm2 for all buffers
-autocmd BufEnter * call ncm2#enable_for_buffer()
-" :help Ncm2PopupOpen for more information
-set completeopt=noinsert,menuone,noselect
-augroup END
 " Ale
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
@@ -116,6 +102,5 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
-" ncm2-jedi python setings
-let g:ncm2_jedi = '/usr/bin/python3'
-let g:python3_host_prog = '/usr/bin/python3'
+" Disable alert of coc.nvim at startup
+let g:coc_disable_startup_warning = 1
