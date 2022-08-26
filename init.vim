@@ -85,3 +85,8 @@ nnoremap <A-l> <C-w>l
 
 " disable coc.nvim alert at startup
 let g:coc_disable_startup_warning = 1
+
+" use  coc#refresh()
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#confirm():
+      \ coc#refresh()
