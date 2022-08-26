@@ -14,11 +14,9 @@ Plug 'Yggdroot/indentLine'
 " File Explorer integrated
 Plug 'preservim/nerdtree'
 
-" syntax check
-Plug 'w0rp/ale'
-
 " Autocomplete
 Plug 'jiangmiao/auto-pairs'
+Plug 'neoclide/coc.nvim', {'branch': 'relase'}
 
 "Formater
 Plug 'Chiel92/vim-autoformat'
@@ -65,22 +63,9 @@ set tabstop=4
 set shiftwidth=4
 " vim-autoformat
 noremap <F3> :Autoformat<CR>
-" Ale
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_linters = {'python': ['flake8']}
-" Airline
-let g:airline_left_sep  = ''
-let g:airline_right_sep = ''
-let g:airline#extensions#ale#enabled = 1
-let airline#extensions#ale#error_symbol = 'E:'
-let airline#extensions#ale#warning_symbol = 'W:'
 
 "NERDTree setup
-
+"
 "Changing default NERDTree arrows
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
@@ -92,10 +77,11 @@ nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 set splitright
 set splitbelow
 
-" use alt+hjkl to move between split/vsplit panels
+" use alt+ h/l to move between split/vsplit panels
 tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-k> <C-\><C-n><C-w>k
 tnoremap <A-l> <C-\><C-n><C-w>l
 nnoremap <A-h> <C-w>h
-nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+
+" disable coc.nvim alert at startup
+let g:coc_disable_startup_warning = 1
