@@ -16,7 +16,7 @@ Plug 'preservim/nerdtree'
 
 " Autocomplete
 Plug 'jiangmiao/auto-pairs'
-Plug 'neoclide/coc.nvim', {'branch': 'relase'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "Formater
 Plug 'Chiel92/vim-autoformat'
