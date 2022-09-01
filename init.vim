@@ -3,7 +3,7 @@
 call plug#begin()
 
 " UI related
-Plug 'chriskempson/base16-vim'
+Plug 'dracula/vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
@@ -32,10 +32,10 @@ call plug#end()
 syntax on
 syntax enable
 " colorscheme
-let base16colorspace=256
-colorscheme base16-gruvbox-dark-hard
-set background=dark
-" True Color Support if it's avaiable in terminal
+syntax on
+colorscheme dracula
+let g:airline_theme='dracula'
+"True Color Support if it's avaiable in terminal
 if has("termguicolors")
     set termguicolors
 endif
