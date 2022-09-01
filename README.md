@@ -2,9 +2,10 @@
 
 - **pynvim**
 - **pylint**
+- **jedi**
 
 ### # Comando:
-`pip3 install pynvim pylint`
+`pip3 install pynvim pylint jedi`
 
 ### # Para el autocompletado de los archivos HTML y CSS para la programación Frontend de Django, es necesario lo siguiente:
 
